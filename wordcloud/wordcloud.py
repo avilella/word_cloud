@@ -649,6 +649,7 @@ class WordCloud(object):
                         self.background_color)
         draw = ImageDraw.Draw(img)
         for (word, count), font_size, position, orientation, color in self.layout_:
+            print(str(word) + "," + str(count))
             font = ImageFont.truetype(self.font_path,
                                       int(font_size * self.scale))
             transposed_font = ImageFont.TransposedFont(
